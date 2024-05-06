@@ -70,6 +70,10 @@
     max-width: 1400px;
   }
 
+  @media (min-width: 1800px) {
+    max-width: 2200px;
+  }
+
   .teach-item {
     color: #090909;
     text-align: center;
