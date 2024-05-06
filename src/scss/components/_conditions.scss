@@ -1,0 +1,59 @@
+@use "../utils/mixins" as mx;
+
+.conditions-block {
+  color: #090909;
+  text-align: center;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 97, 66, 0);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 115.2px */
+  text-transform: uppercase;
+
+  background: linear-gradient(
+    92deg,
+    #dfb039 8.51%,
+    #ffda78 54.63%,
+    #dfb039 97.36%
+  );
+}
+
+.conditions {
+  background: #090909;
+  @include mx.adaptive("padding-top", 100, 50, 0);
+  @include mx.adaptive("padding-bottom", 260, 120, 0);
+
+  .price-for-you {
+    color: #fff;
+    text-align: center;
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 20, 17, 0);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 20px */
+    letter-spacing: -0.4px;
+
+    margin-bottom: 20px;
+  }
+
+  .price {
+    padding: 20px 30px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+
+    color: #fff;
+    text-align: center;
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 64, 36, 0);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 76.8px */
+    text-transform: uppercase;
+
+    @include mx.adaptive("max-width", 265, 220, 0);
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 50px;
+  }
+}

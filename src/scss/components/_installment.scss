@@ -1,0 +1,84 @@
+@use "../utils/mixins" as mx;
+
+.pay-parts {
+  padding: 30px 60px;
+
+  .inner-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include mx.adaptive("max-width", 1400, 1000, 0);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.zero-percent {
+  color: #c60000;
+  text-align: center;
+  font-family: "Futura PT";
+  font-size: 150px;
+  @include mx.adaptive("font-size", 150, 100, 0);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 180px */
+  text-transform: uppercase;
+}
+
+.pay-parts-text {
+  color: #090909;
+  text-align: center;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 64, 42, 0);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 90%; /* 57.6px */
+  text-transform: uppercase;
+}
+
+.banks-image {
+  display: block;
+  @include mx.adaptive("width", 170, 120, 0);
+  @include mx.adaptive("heigth", 110, 80, 0);
+}
+
+// installment
+
+.installment {
+  background: #090909;
+  @include mx.adaptive("padding-top", 80, 40, 0);
+  @include mx.adaptive("padding-bottom", 250, 120, 0);
+}
+
+.category-list {
+  .installment-box {
+    padding: 50px 40px;
+  }
+
+  .installment-text {
+    color: #fff;
+    text-align: center;
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 20, 17, 0);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 20px */
+    letter-spacing: -0.4px;
+
+    margin-bottom: 20px;
+  }
+  .installment-price {
+    color: #fff;
+    text-align: center;
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 40, 20, 0);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 48px */
+    text-transform: uppercase;
+
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+}

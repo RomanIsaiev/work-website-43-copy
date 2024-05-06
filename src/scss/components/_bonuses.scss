@@ -1,0 +1,156 @@
+@use "../utils/mixins" as mx;
+
+.bonuses {
+  background: #090909;
+  background-image: url(/src/img/bonuses/ellipse-left.svg),
+    url(/src/img/bonuses/ellipse-right.svg);
+  background-repeat: no-repeat;
+  background-position: top 50% left 0, top 50% right 0;
+}
+
+.bonuses-title {
+  font-family: "Futura PT";
+  text-align: center;
+  @include mx.adaptive("font-size", 110, 70, 0);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 131.012px */
+  @include mx.adaptive("letter-spacing", -7.6, -3, 0);
+  text-transform: uppercase;
+
+  background: linear-gradient(
+    92deg,
+    #dfb039 8.51%,
+    #ffda78 54.63%,
+    #dfb039 97.36%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @include mx.adaptive("margin-bottom", 60, 30, 0);
+}
+
+.bonuses-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  @include mx.adaptive("gap", 60, 30, 0);
+
+  .bonus-item {
+    @include mx.adaptive("padding-top", 80, 40, 0);
+    @include mx.adaptive("padding-bottom", 60, 30, 0);
+    padding-left: 30px;
+    padding-right: 30px;
+
+    position: relative;
+    border-radius: 34px;
+    border: 3px solid #ffd676;
+
+    @include mx.adaptive("max-width", 605, 345, 0);
+    width: 100%;
+    @include mx.adaptive("height", 800, 600, 0);
+  }
+}
+
+.bonus-category {
+  position: absolute;
+  left: 50%;
+  top: -4%;
+
+  transform: translate(-50%);
+
+  display: block;
+  color: #fff;
+  text-align: center;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 24, 20, 0);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 23.799px */
+  letter-spacing: -0.476px;
+  text-transform: uppercase;
+
+  padding: 17px;
+
+  border-radius: 8px;
+  background: #bf0000;
+  box-shadow: 0px 0px 17px 0px rgba(191, 0, 0, 0.6);
+
+  @include mx.adaptive("max-width", 260, 130, 0);
+  width: 100%;
+}
+
+.bonus-title {
+  color: #fff;
+  text-align: center;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 32, 26, 0);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 38.4px */
+  text-transform: uppercase;
+
+  @include mx.adaptive("max-width", 468, 300, 0);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-bottom: 50px;
+}
+
+.bonus-image {
+  @include mx.adaptive("width", 490, 330, 0);
+  @include mx.adaptive("height", 360, 200, 0);
+  @include mx.adaptive("margin-bottom", 40, 20, 0);
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inner-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  @include mx.adaptive("bottom", 60, 30, 0);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+  border-radius: 17px;
+  border: 2px solid #bf0000;
+  background: #171717;
+
+  @include mx.adaptive("max-width", 468, 300, 0);
+  width: 100%;
+  @include mx.adaptive("height", 165, 130, 0);
+  margin-left: auto;
+  margin-right: auto;
+
+  .result {
+    color: #ffd676;
+    text-align: center;
+    font-family: "Futura PT";
+    font-size: 25.499px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 25.499px */
+    letter-spacing: -0.51px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .result-text {
+    color: #fff;
+    text-align: center;
+    font-family: "Futura PT";
+    font-size: 23.799px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 23.799px */
+    letter-spacing: -0.476px;
+  }
+}
