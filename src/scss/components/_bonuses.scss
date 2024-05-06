@@ -134,7 +134,7 @@
     color: #ffd676;
     text-align: center;
     font-family: "Futura PT";
-    font-size: 25.499px;
+    @include mx.adaptive("font-size", 26, 22, 0);
     font-style: normal;
     font-weight: 500;
     line-height: 100%; /* 25.499px */
@@ -147,7 +147,7 @@
     color: #fff;
     text-align: center;
     font-family: "Futura PT";
-    font-size: 23.799px;
+    @include mx.adaptive("font-size", 24, 20, 0);
     font-style: normal;
     font-weight: 400;
     line-height: 100%; /* 23.799px */
