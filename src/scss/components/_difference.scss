@@ -1,0 +1,213 @@
+@use "../utils/mixins" as mx;
+
+.difference {
+  @include mx.adaptive("padding-top", 150, 60, 0);
+  @include mx.adaptive("padding-bottom", 150, 60, 0);
+  background: #090909;
+
+  background-image: url(/src/img/difference/background-desktop-1x.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .title {
+    color: #fff;
+    text-align: center;
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 64, 26, 0);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 64px */
+
+    @include mx.adaptive("letter-spacing", -2.56, -1, 0);
+    text-transform: uppercase;
+
+    @include mx.adaptive("max-width", 1122, 345, 0);
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mx.adaptive("margin-bottom", 100, 50, 0);
+  }
+
+  .title span {
+    color: #ffd05a;
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .difference {
+    background-image: url(/src/img/difference/background-desktop-2x.jpg);
+  }
+}
+
+.difference-list {
+  display: flex;
+  flex-direction: column;
+  @include mx.adaptive("gap", 80, 50, 0);
+
+  @include mx.adaptive("margin-bottom", 250, 120, 0);
+
+  .item {
+    padding: calc(40px + (60 - 40) * ((100vw - 375px) / (1920 - 375)))
+      calc(24px + (123 - 24) * ((100vw - 375px) / (1920 - 375)));
+
+    position: relative;
+    @include mx.adaptive("max-width", 841, 345, 0);
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .item:nth-child(1) {
+    border: 1px solid #c60000;
+
+    .item-accent {
+      color: #fff;
+      background: #c60000;
+    }
+  }
+
+  .item:nth-child(2) {
+    border: 1px solid #cff6b0;
+
+    .item-accent {
+      color: #090909;
+      background: #cff6b0;
+    }
+  }
+
+  .image {
+    position: absolute;
+    left: 50%;
+    top: -7%;
+
+    @include mx.adaptive("width", 55, 35, 0);
+    @include mx.adaptive("height", 55, 35, 0);
+
+    transform: translate(-50%);
+  }
+
+  .item-title {
+    color: #d7d7d7;
+    text-align: center;
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 40, 24, 0);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 40px */
+    letter-spacing: -1.6px;
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+  }
+
+  .item-desc {
+    color: #fff;
+    text-align: center;
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 24, 18, 0);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%; /* 26.4px */
+    letter-spacing: -0.48px;
+
+    @include mx.adaptive("max-width", 595, 285, 0);
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 20px;
+  }
+
+  .item-accent {
+    text-align: center;
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 24, 18, 0);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%; /* 26.4px */
+    letter-spacing: -0.48px;
+
+    border-radius: 5px;
+
+    padding: 10px;
+  }
+
+  .item-accent span {
+    font-weight: 500;
+  }
+}
+
+.real-container {
+  @include mx.adaptive("max-width", 1300, 345, 0);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  .title {
+    margin-bottom: 20px;
+  }
+
+  .real-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+
+    margin-bottom: 20px;
+  }
+
+  .list-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    text-align: center;
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 24, 18, 0);
+    font-style: normal;
+    font-weight: 450;
+    line-height: 110%; /* 26.4px */
+    letter-spacing: -0.48px;
+
+    @include mx.adaptive("padding", 30, 20, 0);
+    border-radius: 10px;
+    border: 1px solid #ffd05a;
+    background: rgba(255, 255, 255, 0.1);
+
+    @include mx.adaptive("max-width", 444, 345, 0);
+    width: 100%;
+    @include mx.adaptive("height", 102, 69, 0);
+  }
+
+  .real-button {
+    display: block;
+    color: #090909;
+    text-align: center;
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 24, 16, 0);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 24px */
+    letter-spacing: -0.48px;
+    text-transform: uppercase;
+
+    @include mx.adaptive("padding", 30, 20, 0);
+    @include mx.adaptive("max-width", 900, 345, 0);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 7px;
+    background: linear-gradient(
+      92deg,
+      #dfb039 8.51%,
+      #ffda78 54.63%,
+      #dfb039 97.36%
+    );
+  }
+}

@@ -1,0 +1,122 @@
+@use "../utils/mixins" as mx;
+
+.section-questions {
+  background: #090909;
+  @include mx.adaptive("padding-top", 200, 100, 0);
+  @include mx.adaptive("padding-bottom", 200, 100, 0);
+}
+
+.question-title-container {
+  position: relative;
+
+  @include mx.adaptive("margin-bottom", 60, 30, 0);
+
+  @include mx.adaptive("max-width", 817, 350, 0);
+  margin-left: auto;
+  margin-right: auto;
+  .question-title {
+    color: #fff;
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 109, 44, 0);
+    font-style: normal;
+    font-weight: 300;
+    line-height: 120%; /* 131.012px */
+    @include mx.adaptive("letter-spacing", -7.6, -3, 0);
+    text-transform: uppercase;
+  }
+
+  .question-subtitle {
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 123, 40, 0);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 70%; /* 147.388px */
+    @include mx.adaptive("letter-spacing", -6.1, -2, 0);
+    text-transform: uppercase;
+
+    background: linear-gradient(
+      92deg,
+      #dfb039 8.51%,
+      #ffda78 54.63%,
+      #dfb039 97.36%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .image {
+    position: absolute;
+    right: 10%;
+    bottom: -10px;
+
+    @include mx.adaptive("width", 155, 63, 0);
+    @include mx.adaptive("height", 207, 84, 0);
+  }
+}
+
+/* faq-02 */
+
+.isOpen .content-two {
+  display: block;
+}
+
+.content-two {
+  display: none;
+}
+
+.question-two {
+  position: relative;
+  @include mx.adaptive("max-width", 817, 350, 0);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.question-two::after {
+  content: "";
+  display: block;
+
+  width: 100%;
+  height: 1px;
+
+  margin: 30px auto;
+
+  background: #5d5d5d;
+}
+
+.question-two-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.question-name-two {
+  color: #fff;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 27, 18, 0);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 15px */
+  letter-spacing: -0.3px;
+  @include mx.adaptive("max-width", 666, 265, 0);
+}
+
+.content-text-two {
+  padding-top: 20px;
+
+  color: #fff;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 27, 18, 0);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 15px */
+  letter-spacing: -0.3px;
+
+  @include mx.adaptive("max-width", 666, 265, 0);
+}
+
+.question-two.open .symbol-image {
+  transform: rotate(135deg);
+}

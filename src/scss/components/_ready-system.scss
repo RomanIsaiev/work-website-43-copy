@@ -1,0 +1,228 @@
+@use "../utils/mixins" as mx;
+
+.ready-system {
+  @include mx.adaptive("padding-top", 100, 50, 0);
+  @include mx.adaptive("padding-bottom", 150, 50, 0);
+  background: #090909;
+
+  @media (max-width: 550px) {
+    background-image: url(/src/img/ready-system/ready-system-background-mobile-1x.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media (max-width: 550px) and (min-device-pixel-ratio: 2),
+    (max-width: 550px) and (min-resolution: 192dpi),
+    (max-width: 550px) and (min-resolution: 2dppx) {
+    background-image: url(/src/img/ready-system/ready-system-background-mobile-2x.jpg);
+  }
+
+  .wrapper {
+    padding: calc(25px + (100 - 25) * ((100vw - 375px) / (1920 - 375)))
+      calc(3px + (60 - 3) * ((100vw - 375px) / (1920 - 375)));
+    border-radius: 37px;
+    border: 1px solid #ffd676;
+    box-shadow: 0px 0px 20px 0px rgba(255, 221, 85, 0.5);
+
+    @include mx.adaptive("max-width", 1382, 550, 0);
+    margin-left: auto;
+    margin-right: auto;
+
+    background-image: url(/src/img/ready-system/ready-system-background-desktop-1x.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (max-width: 550px) and (min-device-pixel-ratio: 2),
+      (max-width: 550px) and (min-resolution: 192dpi),
+      (max-width: 550px) and (min-resolution: 2dppx) {
+      padding-top: 210px;
+      border: inherit;
+      box-shadow: none;
+      background-image: none;
+    }
+
+    @media (max-width: 550px) {
+      padding-top: 210px;
+      border: inherit;
+      box-shadow: none;
+      background-image: none;
+    }
+  }
+
+  @media (min-width: 550px) and (min-device-pixel-ratio: 2),
+    (min-width: 550px) and (min-resolution: 192dpi),
+    (min-width: 550px) and (min-resolution: 2dppx) {
+    .wrapper {
+      background-image: url(/src/img/ready-system/ready-system-background-desktop-2x.png);
+    }
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mx.adaptive("max-width", 540, 315, 0);
+    width: 100%;
+    margin-left: auto;
+    margin-right: 0;
+
+    @media (max-width: 550px) {
+      margin-right: auto;
+    }
+  }
+
+  .inner-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid #ffd676;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 17.331px 0px rgba(255, 221, 85, 0.5);
+    backdrop-filter: blur(8.665338516235352px);
+
+    @include mx.adaptive("max-width", 540, 315, 0);
+    width: 100%;
+    @include mx.adaptive("height", 139, 73, 0);
+    @include mx.adaptive("margin-bottom", 30, 20, 0);
+
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  .title {
+    text-align: center;
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 36, 20, 0);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 43.2px */
+    text-transform: uppercase;
+
+    background: linear-gradient(
+      92deg,
+      #dfb039 8.51%,
+      #ffda78 54.63%,
+      #dfb039 97.36%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text {
+    color: #fff;
+    text-align: center;
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 38, 22, 0);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 70%;
+    letter-spacing: -1.14px;
+  }
+
+  .text span {
+    @include mx.adaptive("font-size", 25, 16, 0);
+  }
+
+  .image {
+    margin-left: auto;
+    margin-right: 0;
+
+    @include mx.adaptive("margin-bottom", 20, 10, 0);
+    @include mx.adaptive("width", 450, 260, 0);
+    height: auto;
+  }
+
+  .ready-system-button {
+    display: block;
+
+    color: #fff;
+    text-align: center;
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 24, 16, 0);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 24px */
+    letter-spacing: -0.48px;
+    text-transform: uppercase;
+
+    @include mx.adaptive("padding", 30, 20, 0);
+    border-radius: 10px;
+    background: linear-gradient(90deg, #890000 0%, #c60000 50.5%, #890000 100%);
+
+    @include mx.adaptive("max-width", 450, 260, 0);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .writing-list {
+    display: flex;
+    flex-direction: column;
+    @include mx.adaptive("gap", 10, 5, 0);
+    @include mx.adaptive("margin-bottom", 40, 20, 0);
+
+    @include mx.adaptive("max-width", 432, 280, 0);
+  }
+
+  .writing-text {
+    color: #fff;
+    text-align: center;
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 24, 16, 0);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 24px */
+    letter-spacing: -0.72px;
+  }
+}
+
+.ready-system.second {
+  padding-bottom: 0;
+
+  @media (max-width: 550px) {
+    .container {
+      padding: 0;
+    }
+  }
+
+  @media (min-width: 550px) {
+    .wrapper {
+      background-image: url(/src/img/how-works/money-left-1x.png),
+        url(/src/img/master-format/money-right-1x.png),
+        url(/src/img/ready-system/ready-system-background-desktop-1x.png);
+      background-repeat: no-repeat;
+      background-position: left 0 top 0,
+        right 0 bottom
+          calc(80px + (150 - 80) * ((100vw - 375px) / (1920 - 375))),
+        center;
+      background-size: calc(
+          92px + (242 - 92) * ((100vw - 375px) / (1920 - 375))
+        ),
+        calc(163px + (309 - 163) * ((100vw - 375px) / (1920 - 375))), 120%;
+    }
+
+    @media (min-width: 768px) {
+      background-size: calc(
+          92px + (242 - 92) * ((100vw - 375px) / (1920 - 375))
+        ),
+        calc(163px + (309 - 163) * ((100vw - 375px) / (1920 - 375))), 100%;
+    }
+  }
+}
+
+@media (min-width: 550px) and (min-device-pixel-ratio: 2),
+  (min-width: 550px) and (min-resolution: 192dpi),
+  (min-width: 550px) and (min-resolution: 2dppx) {
+  .ready-system.second {
+    .wrapper {
+      background-image: url(/src/img/how-works/money-left-2x.png),
+        url(/src/img/master-format/money-right-2x.png),
+        url(/src/img/ready-system/ready-system-background-desktop-2x.png);
+    }
+  }
+}

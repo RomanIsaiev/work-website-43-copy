@@ -1,0 +1,13 @@
+@use "../utils/variables" as var;
+
+$fonts: var.$font-weights;
+
+@each $key, $value in $fonts {
+  @font-face {
+    font-family: "Futura PT";
+    src: url("../fonts/FUTURAPT-#{$key}.TTF") format("truetype");
+    font-weight: $value;
+    font-style: normal;
+    font-display: swap;
+  }
+}

@@ -1,0 +1,266 @@
+@use "../utils/mixins" as mx;
+
+.master-format {
+  @include mx.adaptive("padding-top", 150, 60, 0);
+  @include mx.adaptive("padding-bottom", 200, 120, 0);
+
+  background-image: url(/src/img/master-format/background-mobile-1x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (min-width: 500px) {
+    background-image: url(/src/img/master-format/background-1x.jpg);
+  }
+
+  @media (min-width: 500px) and (min-device-pixel-ratio: 2),
+    (min-width: 500px) and (min-resolution: 192dpi),
+    (min-width: 500px) and (min-resolution: 2dppx) {
+    background-image: url(/src/img/master-format/background-2x.jpg);
+  }
+
+  .container {
+    background-image: url(/src/img/master-format/money-right-1x.png);
+    background-repeat: no-repeat;
+    background-position: right 0 bottom 60px;
+    background-size: calc(
+      163px + (625 - 163) * ((100vw - 375px) / (1920 - 375))
+    );
+  }
+
+  .title-container {
+    @include mx.adaptive("max-width", 640, 350, 0);
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mx.adaptive("margin-bottom", 60, 50, 0);
+  }
+
+  .title {
+    color: #fff;
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 180, 99, 0);
+    font-style: normal;
+    font-weight: 300;
+    line-height: 70%; /* 216px */
+    @include mx.adaptive("letter-spacing", -12.6, -7, 0);
+    text-transform: uppercase;
+  }
+
+  .subtitle {
+    display: block;
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 70, 34, 0);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 63px */
+    @include mx.adaptive("letter-spacing", -2.8, -1.3, 0);
+    text-transform: uppercase;
+
+    background: linear-gradient(
+      92deg,
+      #dfb039 8.51%,
+      #ffda78 54.63%,
+      #dfb039 97.36%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.master-format-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  @include mx.adaptive("grid-column-gap", 15, 10, 0);
+  @include mx.adaptive("grid-row-gap", 30, 25, 0);
+  @include mx.adaptive("margin-bottom", 50, 30, 0);
+
+  .format-item {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mx.adaptive("gap", 15, 10, 0);
+
+    border-radius: 15px;
+    border: 1px solid #bf0000;
+    background: rgba(255, 255, 255, 0.07);
+    box-shadow: 0px 0px 23px 0px rgba(198, 0, 0, 0.6);
+
+    @include mx.adaptive("max-width", 530, 345, 0);
+    @include mx.adaptive("height", 171, 104, 0);
+    width: 100%;
+  }
+
+  .image {
+    position: absolute;
+    top: -20%;
+    left: 50%;
+
+    @include mx.adaptive("width", 56, 36, 0);
+    @include mx.adaptive("height", 56, 36, 0);
+
+    transform: translate(-50%);
+  }
+
+  .item-number {
+    color: rgba(255, 255, 255, 0.15);
+    text-align: center;
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 92, 60, 0);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 92.147px */
+    @include mx.adaptive("letter-spacing", -6.4, -4.2, 0);
+  }
+
+  .item-text {
+    color: #fff;
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 23, 18, 0);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 23.627px */
+    letter-spacing: -0.4px;
+
+    @include mx.adaptive("max-width", 320, 240, 0);
+  }
+}
+
+.master-format-button {
+  display: block;
+  color: #fff;
+  text-align: center;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 23, 16, 0);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 23.627px */
+  letter-spacing: -0.473px;
+  text-transform: uppercase;
+
+  @include mx.adaptive("padding", 30, 20, 0);
+  border-radius: 10px;
+  background: linear-gradient(90deg, #890000 0%, #c60000 50.5%, #890000 100%);
+
+  @include mx.adaptive("max-width", 530, 345, 0);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mx.adaptive("margin-bottom", 200, 120, 0);
+}
+
+//  you get container
+
+.get-title-container {
+  @include mx.adaptive("max-width", 870, 350, 0);
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mx.adaptive("margin-bottom", 60, 40, 0);
+}
+
+.get-title {
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 100, 40, 0);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 90%; /* 90px */
+  @include mx.adaptive("letter-spacing", -5, -2, 0);
+  text-transform: uppercase;
+
+  background: linear-gradient(
+    92deg,
+    #dfb039 8.51%,
+    #ffda78 54.63%,
+    #dfb039 97.36%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.get-subtitle {
+  display: block;
+  color: #fff;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 152, 60, 0);
+  font-style: normal;
+  font-weight: 300;
+  line-height: 70%; /* 182.4px */
+  @include mx.adaptive("letter-spacing", -10.6, -4.3, 0);
+  text-transform: uppercase;
+}
+
+.get-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  @include mx.adaptive("gap", 23, 5, 0);
+
+  @include mx.adaptive("max-width", 1200, 345, 0);
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mx.adaptive("margin-bottom", 50, 20, 0);
+
+  .get-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    text-align: center;
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 24, 17, 0);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 23.623px */
+    letter-spacing: -0.472px;
+
+    @include mx.adaptive("max-width", 345, 170, 0);
+    @include mx.adaptive("height", 177, 66, 0);
+    width: 100%;
+
+    padding: calc(18px + (60 - 18) * ((100vw - 375px) / (1920 - 375)))
+      calc(14px + (26 - 14) * ((100vw - 375px) / (1920 - 375)));
+
+    border-radius: 8px;
+    border: 1px solid #ffd676;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 12.757px 0px rgba(255, 221, 85, 0.3);
+    // backdrop-filter: blur(1px);
+  }
+}
+
+.get-button {
+  display: block;
+  color: #090909;
+  text-align: center;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 24, 16, 0);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 23.623px */
+  letter-spacing: -0.472px;
+  text-transform: uppercase;
+
+  border-radius: 8.268px;
+  background: linear-gradient(
+    92deg,
+    #dfb039 8.51%,
+    #ffda78 54.63%,
+    #dfb039 97.36%
+  );
+
+  @include mx.adaptive("max-width", 968, 345, 0);
+  width: 100%;
+  padding: calc(20px + (30 - 20) * ((100vw - 375px) / (1920 - 375)));
+  margin-left: auto;
+  margin-right: auto;
+}

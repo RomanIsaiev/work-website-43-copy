@@ -1,0 +1,156 @@
+@use "../utils/mixins" as mx;
+
+.what-teach {
+  @include mx.adaptive("padding-top", 150, 60, 0);
+  @include mx.adaptive("padding-bottom", 150, 60, 0);
+
+  background-image: url(/src/img/what-teach/background.svg);
+  background-position: center;
+
+  .title {
+    text-align: center;
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 130, 60, 0);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 70%; /* 156px */
+    @include mx.adaptive("letter-spacing", -5.2px, -2.4px, 0);
+    text-transform: uppercase;
+
+    background: linear-gradient(90deg, #890000 0%, #c60000 50.5%, #890000 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include mx.adaptive("margin-bottom", 20, 5, 0);
+  }
+
+  .desc {
+    color: #090909;
+    text-align: center;
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 40, 21, 0);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%; /* 36px */
+    letter-spacing: -0.8px;
+
+    @include mx.adaptive("max-width", 750, 343, 0);
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mx.adaptive("margin-bottom", 60, 30, 0);
+  }
+}
+
+.teach-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  @include mx.adaptive("gap", 20, 5, 0);
+
+  @include mx.adaptive("margin-bottom", 150, 80, 0);
+
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 650px) {
+    max-width: 500px;
+  }
+
+  @media (min-width: 1075px) {
+    max-width: 700px;
+  }
+
+  @media (min-width: 1175px) {
+    max-width: 1200px;
+  }
+
+  @media (min-width: 1400px) {
+    max-width: 1400px;
+  }
+
+  .teach-item {
+    color: #090909;
+    text-align: center;
+    font-family: "Futura PT";
+    font-size: 24px;
+    @include mx.adaptive("font-size", 24, 15, 0);
+    font-style: normal;
+    font-weight: 450;
+    line-height: 90%; /* 21.6px */
+    letter-spacing: -0.48px;
+
+    @include mx.adaptive("padding-top", 34, 17, 0);
+    @include mx.adaptive("padding-bottom", 32, 22, 0);
+    @include mx.adaptive("padding-left", 20, 10, 0);
+    @include mx.adaptive("padding-right", 20, 10, 0);
+
+    border-radius: 15px;
+    border: 1.938px solid #c60000;
+    backdrop-filter: blur(9.6875px);
+
+    @include mx.adaptive("max-width", 330, 170, 0);
+    @include mx.adaptive("heigth", 403, 208, 0);
+    width: 100%;
+  }
+
+  .image {
+    @include mx.adaptive("margin-bottom", 20, 10, 0);
+    @include mx.adaptive("width", 290, 150, 0);
+    @include mx.adaptive("heigth", 290, 150, 0);
+  }
+}
+
+.result-box {
+  .result-title {
+    color: #090909;
+    text-align: center;
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 60, 30, 0);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 80%; /* 48px */
+    letter-spacing: -2.4px;
+    text-transform: uppercase;
+
+    @include mx.adaptive("margin-bottom", 40, 20, 0);
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mx.adaptive("gap", 40, 20, 0);
+
+    @include mx.adaptive("padding", 30, 20, 0);
+    border-radius: 20px;
+    background: #090909;
+
+    @include mx.adaptive("max-width", 678, 345, 0);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .result-list {
+    display: flex;
+    flex-direction: column;
+    @include mx.adaptive("gap", 20, 10, 0);
+  }
+
+  .result-item {
+    color: rgba(255, 255, 255, 0.7);
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 24, 16, 0);
+    font-style: normal;
+    font-weight: 450;
+    line-height: 100%; /* 24px */
+    letter-spacing: -0.48px;
+
+    @include mx.adaptive("max-width", 354, 168, 0);
+  }
+
+  .result-item span {
+    color: #fff;
+  }
+}

@@ -1,0 +1,218 @@
+@use "../utils/mixins" as mx;
+
+.author {
+  background: #090909;
+  .container {
+    padding: 0;
+  }
+}
+
+.author-image-container {
+  @include mx.adaptive("padding-top", 260, 130, 0);
+  @include mx.adaptive("padding-bottom", 77, 40, 0);
+  @include mx.adaptive("padding-left", 70, 15, 0);
+  @include mx.adaptive("padding-right", 93, 0, 0);
+
+  background-image: url(/src/img/author/author-background-mobile-1x.jpg);
+  background-repeat: no-repeat;
+  background-size: 110%;
+
+  @media (min-width: 500px) {
+    background-image: url(/src/img/author/author-background-desktop-1x.jpg);
+    background-size: 110%;
+    background-position: center;
+  }
+
+  @media (min-width: 500px) and (min-device-pixel-ratio: 2),
+    (min-width: 500px) and (min-resolution: 192dpi),
+    (min-width: 500px) and (min-resolution: 2dppx) {
+    background-image: url(/src/img/author/author-background-desktop-2x.jpg);
+  }
+
+  @media (min-width: 768px) {
+    background-size: 100%;
+  }
+
+  @media (min-width: 1600px) {
+    background-size: 100%;
+  }
+}
+
+@media (max-width: 500px) and (min-device-pixel-ratio: 2),
+  (max-width: 500px) and (min-resolution: 192dpi),
+  (max-width: 500px) and (min-resolution: 2dppx) {
+  .author-image-container {
+    background-image: url(/src/img/author/author-background-mobile-2x.jpg);
+  }
+}
+
+.author-title-container {
+  @include mx.adaptive("padding-top", 336, 10, 0);
+
+  .author-title {
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 360, 120, 0);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 90%; /* 324px */
+    @include mx.adaptive("letter-spacing", -18, -6, 0);
+    text-transform: uppercase;
+
+    background: linear-gradient(
+      92deg,
+      #dfb039 8.51%,
+      #ffda78 54.63%,
+      #dfb039 97.36%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  @media (max-width: 500px) {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .author-subtitle {
+    display: block;
+    color: #fff;
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 159, 53, 0);
+    font-style: normal;
+    font-weight: 300;
+    line-height: 70%; /* 190.8px */
+    @include mx.adaptive("letter-spacing", -11, -3.85, 0);
+    text-transform: uppercase;
+
+    @media (max-width: 500px) {
+      margin-bottom: 400px;
+    }
+
+    @media (min-width: 501px) {
+      @include mx.adaptive("margin-bottom", 260, 50, 0);
+    }
+  }
+}
+
+.author-name {
+  color: #fff;
+  text-align: center;
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 50, 30, 0);
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%; /* 60px */
+  @include mx.adaptive("letter-spacing", -2.5, -1.5, 0);
+  text-transform: uppercase;
+
+  @include mx.adaptive("padding", 30, 20, 0);
+  @include mx.adaptive("max-width", 450, 315, 0);
+  width: 100%;
+  margin-left: auto;
+  margin-right: 0;
+
+  border-radius: 7px;
+  border: 1px solid #ffd676;
+  background: rgba(255, 255, 255, 0.07);
+
+  /* Drop Shadow */
+  box-shadow: 0px 0px 10px 0px rgba(255, 221, 85, 0.5);
+  backdrop-filter: blur(5px);
+
+  @include mx.adaptive("margin-bottom", 150, 40, 0);
+
+  @media (max-width: 500px) {
+    margin-right: auto;
+  }
+}
+
+.achievement-container {
+  .achievement-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: 1400px) {
+      max-width: 1400px;
+    }
+
+    @include mx.adaptive("margin-bottom", 50, 30, 0);
+
+    .item {
+      position: relative;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: #fff;
+      text-align: center;
+      font-family: "Futura PT";
+      @include mx.adaptive("font-size", 24, 16, 0);
+      font-style: normal;
+      font-weight: 450;
+      line-height: 100%; /* 24px */
+      @include mx.adaptive("letter-spacing", -0.7, -0.5, 0);
+
+      @include mx.adaptive("padding", 30, 20, 0);
+      border-radius: 10px;
+      border: 1px solid #bf0000;
+      background: rgba(255, 255, 255, 0.07);
+      box-shadow: 0px 0px 15px 0px rgba(198, 0, 0, 0.6);
+    }
+
+    .item span {
+      color: #ffd676;
+    }
+
+    .box {
+      position: relative;
+      @include mx.adaptive("height", 498, 354, 0);
+      @include mx.adaptive("width", 380, 275, 0);
+    }
+
+    .image {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+
+      display: block;
+      @include mx.adaptive("margin-top", 30, 20, 0);
+      @include mx.adaptive("width", 380, 275, 0);
+      @include mx.adaptive("height", 380, 275, 0);
+    }
+  }
+}
+
+.achievement-button {
+  display: block;
+  color: #090909;
+  text-align: center;
+  font-family: "Futura PT";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 20px */
+  letter-spacing: -0.4px;
+  text-transform: uppercase;
+
+  @include mx.adaptive("padding", 30, 20, 0);
+  border-radius: 7px;
+  background: linear-gradient(
+    92deg,
+    #dfb039 8.51%,
+    #ffda78 54.63%,
+    #dfb039 97.36%
+  );
+
+  @include mx.adaptive("max-width", 1380, 315, 0);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}

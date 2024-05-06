@@ -1,0 +1,39 @@
+@use "../utils/mixins" as mx;
+
+.footer {
+  background: #090909;
+  @include mx.adaptive("padding-top", 100, 50, 0);
+  @include mx.adaptive("padding-bottom", 100, 30, 0);
+}
+
+.creator-container {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.developer-text {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 24, 17, 0);
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.insta-icon {
+  display: block;
+  @include mx.adaptive("width", 24, 14, 0);
+  @include mx.adaptive("height", 24, 14, 0);
+}
+
+.insta-nickname {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Futura PT";
+  @include mx.adaptive("font-size", 24, 17, 0);
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-decoration-line: underline;
+}
