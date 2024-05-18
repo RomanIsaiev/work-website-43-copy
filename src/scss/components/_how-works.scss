@@ -201,7 +201,7 @@
   @include mx.adaptive("font-size", 96, 42, 0);
   font-style: normal;
   font-weight: 600;
-  line-height: 80%; /* 76.8px */
+  line-height: 120%; /* 76.8px */
   @include mx.adaptive("letter-spacing", -3.8, -1.7, 0);
   text-transform: uppercase;
 
@@ -214,6 +214,8 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  margin-top: -20px;
 }
 
 .master-list {
