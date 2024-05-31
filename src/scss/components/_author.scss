@@ -138,8 +138,12 @@
     margin-left: auto;
     margin-right: auto;
 
-    @media (min-width: 1400px) {
-      max-width: 1400px;
+    @media screen and (min-width: 935px) {
+      max-width: 900px;
+    }
+
+    @media screen and (min-width: 1367px) {
+      max-width: 1300px;
     }
 
     @include mx.adaptive("margin-bottom", 50, 30, 0);
