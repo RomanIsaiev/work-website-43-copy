@@ -4,7 +4,7 @@
   color: #090909;
   text-align: center;
   font-family: "Futura PT";
-  @include mx.adaptive("font-size", 97, 66, 0);
+  @include mx.adaptive("font-size", 72, 40, 0);
   font-style: normal;
   font-weight: 600;
   line-height: 120%; /* 115.2px */
@@ -56,17 +56,4 @@
 
     margin-bottom: 50px;
   }
-}
-
-.conditions-text {
-  margin-top: 50px;
-
-  color: #8b8b8b;
-  text-align: center;
-  font-family: "Futura PT";
-  @include mx.adaptive("font-size", 32, 22, 0);
-  font-style: normal;
-  font-weight: 600;
-  line-height: 100%; /* 76.8px */
-  text-transform: uppercase;
 }
