@@ -11,7 +11,7 @@
   .category-title {
     text-align: center;
     font-family: "Futura PT";
-    @include mx.adaptive("font-size", 100, 70, 0);
+    @include mx.adaptive("font-size", 100, 40, 0);
     font-style: normal;
     font-weight: 600;
     line-height: 90%; /* 90px */
@@ -34,11 +34,11 @@
     color: #fff;
     text-align: center;
     font-family: "Futura PT";
-    @include mx.adaptive("font-size", 120, 90, 0);
+    @include mx.adaptive("font-size", 120, 40, 0);
     font-style: normal;
     font-weight: 300;
     line-height: 100%; /* 144px */
-    @include mx.adaptive("letter-spacing", -8.5, -6, 0);
+    @include mx.adaptive("letter-spacing", -8.5, -3, 0);
     text-transform: uppercase;
   }
 }
@@ -51,7 +51,7 @@
 }
 
 .category-item {
-  @include mx.adaptive("max-width", 429, 240, 0);
+  @include mx.adaptive("max-width", 429, 320, 0);
   width: 100%;
   border-radius: 13px;
 }

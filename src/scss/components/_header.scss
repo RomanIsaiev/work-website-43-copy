@@ -78,13 +78,13 @@
   }
 
   .header-title-contianer {
-    @include mx.adaptive("padding-left", 56, 13, 0);
+    @include mx.adaptive("padding-left", 56, 33, 0);
   }
 
   .title {
     color: #fff;
     font-family: "Futura PT";
-    @include mx.adaptive("font-size", 160, 49, 0);
+    @include mx.adaptive("font-size", 180, 50, 0);
     font-style: normal;
     font-weight: 300;
     line-height: 70%; /* 192px */
@@ -98,7 +98,7 @@
 
   .subtitle {
     font-family: "Futura PT";
-    @include mx.adaptive("font-size", 130, 40, 0);
+    @include mx.adaptive("font-size", 150, 50, 0);
     font-style: normal;
     font-weight: 600;
     line-height: 120%; /* 156px */
@@ -128,7 +128,7 @@
 // }
 
 .master-wrapper-mobile {
-  padding: 15px 25px;
+  padding: 1px 25px;
   border-radius: 6px;
   background: rgba(0, 0, 0, 0.15);
   width: 100%;
@@ -152,7 +152,7 @@
 }
 
 .master-text {
-  @include mx.adaptive("max-width", 390, 275, 0);
+  @include mx.adaptive("max-width", 390, 320, 0);
   padding: calc(10px + (15 - 10) * ((100vw - 375px) / (1920 - 375)))
     calc(10px + (25 - 10) * ((100vw - 375px) / (1920 - 375)));
   border-radius: 6px;
@@ -183,7 +183,7 @@
   display: flex;
   align-items: center;
 
-  @include mx.adaptive("padding-left", 56, 13, 0);
+  @include mx.adaptive("padding-left", 56, 33, 0);
 
   @include mx.adaptive("gap", 8, 4, 0);
 
@@ -204,7 +204,7 @@
     line-height: 90%; /* 36px */
     letter-spacing: -0.8px;
 
-    @include mx.adaptive("max-width", 500, 215, 0);
+    @include mx.adaptive("max-width", 400, 175, 0);
   }
 
   .price {
@@ -214,7 +214,7 @@
     background: #fff;
 
     color: #c60000;
-    text-align: center;
+    // text-align: center;
     font-family: "Futura PT";
     @include mx.adaptive("font-size", 34, 15, 0);
     font-style: normal;
@@ -222,7 +222,7 @@
     line-height: 90%; /* 27px */
     @include mx.adaptive("letter-spacing", -0.6, -0.26, 0);
     text-transform: uppercase;
-    @include mx.adaptive("max-width", 224, 121, 0);
+    @include mx.adaptive("max-width", 200, 90, 0);
     width: 100%;
   }
 
